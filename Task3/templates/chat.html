@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Чат{% endblock %} {% block content %}
+<h1>Чат</h1>
+
+<p><strong>Вы вошли как:</strong> {{ username }}</p>
+
+<div class="chat-box">
+  {% if messages %} {% for msg in messages %}
+  <div class="message"><strong>{{ msg.user }}</strong>: {{ msg.text }}</div>
+  {% endfor %} {% else %}
+  <div class="message">
+    <em>Сообщений пока нет</em>
+  </div>
+  {% endif %}
+</div>
+
+<form method="post" action="{{ url_for('send') }}" autocomplete="off">
+  <label for="message">Ваше сообщение</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="3"
+    required
+    maxlength="500"
+  ></textarea>
+
+  <button type="submit">Отправить</button>
+</form>
+
+<div class="footer-link">
+  <a href="{{ url_for('logout') }}">Выйти</a>
+</div>
+{% endblock %}
