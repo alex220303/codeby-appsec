@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Регистрация</h1>
+
+    <form action="#" method="post" autocomplete="on">
+
+        <label for="username">Логин</label>
+        <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            required 
+            minlength="3"
+            maxlength="30"
+            autocomplete="username">
+
+        <label for="email">Email</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            maxlength="50"
+            autocomplete="email">
+
+        <label for="password">Пароль</label>
+        <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            required 
+            minlength="6"
+            maxlength="50"
+            autocomplete="new-password">
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div class="footer-link">
+        <a href="chat.html">Перейти к переписке</a>
+    </div>
+</div>
+
+</body>
+</html>
